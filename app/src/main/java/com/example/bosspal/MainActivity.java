@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Sample Method to Call Api
+
         Call<ResponseModel> call = RetrofitClient
                 .getInstance()
                 .api()
