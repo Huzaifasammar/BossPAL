@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartingScreen.OnBoardingScreen">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slide_viewpager"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/haveWallet"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slide_viewpager"
+        android:id="@+id/haveWallet"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/dot_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"/>
+
+        <Button
+            android:id="@+id/newWalletLink"
+            android:layout_width="match_parent"
+            android:layout_below="@id/dot_layout"
+            android:layout_height="wrap_content"
+            android:text="create a new wallet"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/haveWalletTx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newWalletLink"
+            android:text="I already have a wallet"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/dark_green"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

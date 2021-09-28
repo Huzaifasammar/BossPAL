@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">BossPAL</string>
+    <string name="slide_heading1">Private and secure</string>
+    <string name="slide_heading2">Trade assets</string>
+    <string name="slide_heading3">Trade assets</string>
+    <string name="slide_heading4">Private and secure</string>
+
+    <string name="slide_dec1">Private keys never leave your device</string>
+    <string name="slide_dec2">Private keys never leave your</string>
+    <string name="slide_dec3">Trade your assets anonymously</string>
+    <string name="slide_dec4">Private keys never leave your device</string>
+    <string name="i_understand_that">I understand that if I lose my recovery word, I will not be able to access my wallet</string>
+    <string name="Never_share">Never share recovery phrase with anyone,store it securely!</string>
+    <string name="continue_tx">continue</string>
+    <string name="back_up_your_wallet_now">Back up your wallet now!</string>
+    <string name="your_recovery_phrase">Your recovery phrase</string>
 </resources>

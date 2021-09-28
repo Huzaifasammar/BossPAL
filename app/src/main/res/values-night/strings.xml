@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="private_and_secure">Private and secure</string>
+    <string name="private_keys_never_leave_your_device">Private keys never leave your device</string>
+    <string name="i_understand_that">I understand that if I lose my recovery word, I will not be able to access my wallet</string>
+    <string name="Never_share">Never share recovery phrase with anyone,store it securely!</string>
+    <string name="continue_tx">continue</string>
+    <string name="back_up_your_wallet_now">Back up your wallet now!</string>
+    <string name="your_recovery_phrase">Your recovery phrase</string>
+</resources>
