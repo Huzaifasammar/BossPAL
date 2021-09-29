@@ -1,6 +1,7 @@
 package com.example.bosspal.ImportWallet;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,6 +24,12 @@ public class ImportWalletList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_import_wallet_list);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Import");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        setSupportActionBar(toolbar);
+
         walletList = findViewById(R.id.walletList);
 
         walletList();

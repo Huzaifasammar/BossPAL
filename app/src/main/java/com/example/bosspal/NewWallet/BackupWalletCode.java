@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
+import com.example.bosspal.MainActivity;
 import com.example.bosspal.Models.CodeModel;
 import com.example.bosspal.R;
 
@@ -13,7 +17,7 @@ import java.util.ArrayList;
 
 public class BackupWalletCode extends AppCompatActivity {
 
-
+    private Button continueBtn;
     private RecyclerView mCodeRecycler;
     WalletCodeAdapter codeAdapter;
     @Override
@@ -21,8 +25,12 @@ public class BackupWalletCode extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_backup_wallet_code);
         mCodeRecycler = findViewById(R.id.codeRecycler);
+        continueBtn = findViewById(R.id.continueBtn);
 
         walletCodesList();
+        continueBtn.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        });
     }
 
     // Grid layout

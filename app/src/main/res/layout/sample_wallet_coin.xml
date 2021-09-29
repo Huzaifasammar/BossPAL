@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingBottom="1dp"
+    android:background="@color/silver"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_bitcoin"
+            android:id="@+id/sample_image_coin" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@id/sample_image_coin"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bitcoin"
+                android:id="@+id/sample_coin_name"
+                android:textSize="22sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/sample_coin_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sample_coin_name"
+                android:text="$42325.24"
+                android:textColor="@color/dark_silver"/>
+
+            <TextView
+                android:id="@+id/sample_coin_profit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/sample_coin_price"
+                android:layout_below="@id/sample_coin_name"
+                android:text="+42.24"
+                android:textColor="@color/dark_silver"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 BTC"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

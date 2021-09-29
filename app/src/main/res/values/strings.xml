@@ -14,4 +14,6 @@
     <string name="continue_tx">continue</string>
     <string name="back_up_your_wallet_now">Back up your wallet now!</string>
     <string name="your_recovery_phrase">Your recovery phrase</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
