@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainFragments.DEXSwapFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@drawable/silver_border">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/youLT"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/you"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You Pay"
+                    android:textColor="@color/dark_silver"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/youPayBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/you"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/yourBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/youPayBalance"
+                    android:text="Balance : 0 BNB"
+                    android:textColor="@color/dark_silver"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/openYouPay"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="7dp"
+                        android:src="@drawable/ic_bitcoin" />
+
+                    <TextView
+                        android:id="@+id/yourBalanceBNB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BNB"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/openYouPay"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    app:tint="@color/dark_silver" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/silverLine"
+                android:layout_below="@id/youLT"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/silver"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/silverLine"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/get"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You Get"
+                    android:textColor="@color/dark_silver"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/youGetBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/get"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/yourGetBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/youGetBalance"
+                    android:text="Balance : 0 BNB"
+                    android:textColor="@color/dark_silver"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/openYouGet"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="7dp"
+                        android:src="@drawable/ic_bitcoin" />
+
+                    <TextView
+                        android:id="@+id/yourGetBNB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BNB"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/openYouGet"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    app:tint="@color/dark_silver" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="1 BNB = 382.584692 TWT"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Swap"
+            android:layout_margin="20dp"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

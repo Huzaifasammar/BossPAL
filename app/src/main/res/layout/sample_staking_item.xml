@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="Bitcoin"
                 android:id="@+id/sample_coin_name"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/sample_coin_price"

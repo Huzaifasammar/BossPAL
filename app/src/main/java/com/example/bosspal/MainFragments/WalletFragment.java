@@ -69,8 +69,8 @@ public class WalletFragment extends Fragment {
         return v;
     }
 
+    // Adapter for TabLayout
     private class TabAdapter extends FragmentPagerAdapter{
-
         ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
         ArrayList<String> stringArrayList = new ArrayList<>();
 
