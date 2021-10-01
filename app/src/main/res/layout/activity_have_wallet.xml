@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WalletList.HaveWalletActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_green"
+        android:id="@+id/haveToolLt">
+
+        <include layout="@layout/toolbar"
+            android:id="@+id/haveWalletToolbar"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tabLt"
+        android:layout_below="@+id/haveToolLt"
+        android:background="@color/dark_green"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/dark_green"
+            android:layout_centerHorizontal="true"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/black"
+            android:textAlignment="center"
+            app:tabMode="fixed"
+            app:tabIndicatorGravity="stretch"
+            app:tabTextAppearance="@style/CustomTabText"
+            app:tabGravity="fill"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicator="@drawable/tablayout_back_select"
+            android:id="@+id/tab_layoutHave" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLt"
+        android:id="@+id/frame_id">
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_marginTop="2dp"
+            android:background="@color/silver"
+            android:layout_height="match_parent"
+            android:id="@+id/viewPageHave" />
+    </FrameLayout>
+
+</RelativeLayout>

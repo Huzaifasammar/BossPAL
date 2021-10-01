@@ -25,6 +25,7 @@ public class DEXFragment extends Fragment {
     private static ViewPager mViewPager;
     private TabLayout mTabLayout;
     private TabDexAdapter adapter;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

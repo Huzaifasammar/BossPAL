@@ -1,6 +1,7 @@
 package com.example.bosspal.ImportWallet;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import com.example.bosspal.Models.CodeModel;
 import com.example.bosspal.Models.WalletListModel;
 import com.example.bosspal.NewWallet.WalletCodeAdapter;
 import com.example.bosspal.R;
+import com.example.bosspal.WalletList.HaveWalletActivity;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -43,6 +45,12 @@ public class WalletImportAdapter extends RecyclerView.Adapter<WalletImportAdapte
         WalletListModel model = modelArrayList.get(position);
         holder.imageView.setImageResource(model.getImageView());
         holder.textView.setText(model.getName());
+
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(context, HaveWalletActivity.class);
+            intent.putExtra("WalletName",model.getName());
+            context.startActivity(intent);
+        });
     }
 
     @Override
