@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="1dp"
+    tools:ignore="UseSwitchCompatOrMaterialXml">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/sample_filter_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_bitcoin"/>
+
+        <TextView
+            android:id="@+id/sampleFilterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BNB"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/sample_filter_img"
+            android:layout_centerVertical="true"/>
+
+        <Switch
+            android:id="@+id/sample_filterSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

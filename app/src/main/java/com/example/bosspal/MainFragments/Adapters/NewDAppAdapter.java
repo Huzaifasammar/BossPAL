@@ -1,4 +1,4 @@
-package com.example.bosspal.MainFragments.DAppAdapter;
+package com.example.bosspal.MainFragments.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,9 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bosspal.Models.CodeModel;
 import com.example.bosspal.Models.NewDAppModel;
-import com.example.bosspal.NewWallet.WalletCodeAdapter;
 import com.example.bosspal.R;
 
 import org.jetbrains.annotations.NotNull;

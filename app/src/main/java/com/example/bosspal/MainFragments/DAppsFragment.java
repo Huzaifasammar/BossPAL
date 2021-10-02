@@ -10,10 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.bosspal.MainFragments.DAppAdapter.NewDAppAdapter;
-import com.example.bosspal.Models.CodeModel;
+import com.example.bosspal.MainFragments.Adapters.NewDAppAdapter;
 import com.example.bosspal.Models.NewDAppModel;
-import com.example.bosspal.NewWallet.WalletCodeAdapter;
 import com.example.bosspal.R;
 
 import java.util.ArrayList;

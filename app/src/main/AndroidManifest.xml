@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/logoboss"
         android:supportsRtl="true"
         android:theme="@style/Theme.BossPAL">
-        <activity android:name=".WalletList.HaveWalletActivity"></activity>
+        <activity android:name=".Common.FilterActivity"></activity>
+        <activity android:name=".Common.NotificationActivity" />
+        <activity android:name=".WalletList.HaveWalletActivity" />
         <activity android:name=".SettingActivities.AddSecurity" />
         <activity android:name=".SettingActivities.PushNotification" />
         <activity android:name=".SettingActivities.AddWallet" />

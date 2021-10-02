@@ -1,5 +1,6 @@
 package com.example.bosspal.MainFragments;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,8 +16,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.bosspal.Common.FilterActivity;
+import com.example.bosspal.Common.NotificationActivity;
 import com.example.bosspal.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -30,6 +34,7 @@ public class WalletFragment extends Fragment {
 
     private static ViewPager mViewPager;
     private TabLayout mTabLayout;
+    private ImageView mFilterData,mNotification;
 
     TabAdapter adapter;
     private static final String fragment_Id="fragmentId";
@@ -56,6 +61,8 @@ public class WalletFragment extends Fragment {
         View v= inflater.inflate(R.layout.fragment_wallet, container, false);
         mTabLayout=(TabLayout) v.findViewById (R.id.tab_layout);
         mViewPager=(ViewPager) v.findViewById(R.id.viewPage);
+        mNotification=(ImageView) v.findViewById(R.id.notification_icon);
+        mFilterData=(ImageView) v.findViewById(R.id.filter_icon);
 
 
         adapter = new TabAdapter(getActivity().getSupportFragmentManager());
@@ -66,7 +73,21 @@ public class WalletFragment extends Fragment {
         mViewPager.setAdapter(adapter);
         mTabLayout.setupWithViewPager(mViewPager);
 
+        clickListener();
         return v;
+    }
+
+
+    private void clickListener(){
+        mFilterData.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(), FilterActivity.class);
+            startActivity(intent);
+        });
+
+        mNotification.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(), NotificationActivity.class);
+            startActivity(intent);
+        });
     }
 
     // Adapter for TabLayout

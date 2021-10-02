@@ -15,7 +15,6 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:padding="5dp"
-            android:src="@drawable/ic_bitcoin"
             android:id="@+id/sample_image_coin" />
 
         <RelativeLayout
@@ -31,6 +30,7 @@
                 android:id="@+id/sample_coin_name"
                 android:textSize="20sp"
                 android:textColor="@color/black"/>
+
             <TextView
                 android:id="@+id/sample_coin_price"
                 android:layout_width="wrap_content"
@@ -54,6 +54,7 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/sample_coin_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0 BTC"
