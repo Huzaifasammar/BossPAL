@@ -33,10 +33,10 @@ public class FilterActivity extends AppCompatActivity {
         list.add(new FilterModel(R.drawable.ic_ethereum,"Ethereum","on"));
 
 
-        //adapter = new FilterAdapter(list,this);
-        //LinearLayoutManager manager = new LinearLayoutManager(this);
-        //mRecyclerView.setHasFixedSize(true);
-        //mRecyclerView.setLayoutManager(manager);
-       // mRecyclerView.setAdapter(adapter);
+        adapter = new FilterAdapter(list,this);
+        LinearLayoutManager manager = new LinearLayoutManager(this);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(manager);
+        mRecyclerView.setAdapter(adapter);
     }
 }

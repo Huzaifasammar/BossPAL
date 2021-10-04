@@ -66,9 +66,10 @@ public class WalletFragment extends Fragment {
 
 
         adapter = new TabAdapter(getActivity().getSupportFragmentManager());
-        adapter.AddFragment(new WalletTokenFragment(),"Token");
-        adapter.AddFragment(new WalletFinanceFragment(),"Finance");
-        adapter.AddFragment(new WalletCollectFragment(),"Collect");
+        adapter.AddFragment(new WalletTokenFragment(),"TOKEN");
+        adapter.AddFragment(new WalletFinanceFragment(),"STAKE");
+        adapter.AddFragment(new WalletCollectFragment(),"NFT");
+        adapter.AddFragment(new WalletWinFragment(),"WIN");
 
         mViewPager.setAdapter(adapter);
         mTabLayout.setupWithViewPager(mViewPager);

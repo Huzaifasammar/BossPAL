@@ -32,7 +32,7 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.FilterView
     @NotNull
     @Override
     public FilterViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.sample_wallet_list,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.sample_filter,parent,false);
 
         return new FilterViewHolder(view);
     }

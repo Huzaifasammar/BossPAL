@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="1dp"
-    tools:ignore="UseSwitchCompatOrMaterialXml">
+    android:layout_height="wrap_content">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:layout_marginBottom="2dp"
+        android:padding="15dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/sample_filter_img"
+        <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:padding="5dp"
-            android:layout_margin="10dp"
-            android:layout_alignParentStart="true"
-            android:src="@drawable/ic_bitcoin"/>
+            android:id="@+id/sample_receiveImg"
+            android:contentDescription="TODO" />
 
         <TextView
-            android:id="@+id/sampleFilterName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BNB"
+            android:layout_marginStart="10dp"
             android:textSize="18sp"
+            android:layout_toEndOf="@id/sample_receiveImg"
             android:textColor="@color/black"
-            android:layout_toEndOf="@id/sample_filter_img"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:id="@+id/sample_receiveName"/>
 
-        <Switch
-            android:id="@+id/sample_filterSwitch"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:textSize="18sp"
+            android:textColor="@color/black"
             android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"/>
+            android:id="@+id/sample_receivePrice"/>
 
     </RelativeLayout>
 

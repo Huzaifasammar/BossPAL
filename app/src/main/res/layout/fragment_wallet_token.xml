@@ -30,17 +30,15 @@
             android:textColor="@color/white"
             android:text="Multi-Coin Wallet 1"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_marginTop="15dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true">
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/sendArrow"
@@ -63,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/receiveLt"
-                android:layout_centerHorizontal="true"
+                android:layout_marginStart="30dp"
                 android:orientation="vertical">
 
                 <ImageView
@@ -86,7 +84,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true">
+                android:layout_marginStart="30dp">
 
                 <ImageView
                     android:id="@+id/buyIcon"
@@ -100,11 +98,34 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="buy"
+                    android:layout_centerHorizontal="true"
                     android:layout_below="@id/buyIcon"
                     android:textColor="@color/white"/>
             </RelativeLayout>
 
-        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp">
+
+                <ImageView
+                    android:id="@+id/swapIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_baseline_swap"
+                    android:background="@drawable/circle_background"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="swap"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/swapIcon"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+        </LinearLayout>
 
 
     </LinearLayout>
