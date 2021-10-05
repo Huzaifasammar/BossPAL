@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.bosspal.MainActivity;
 import com.example.bosspal.Models.CodeModel;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 public class BackupWalletCode extends AppCompatActivity {
 
     private Button continueBtn;
+    private TextView mShowQr;
     private RecyclerView mCodeRecycler;
     WalletCodeAdapter codeAdapter;
     @Override
@@ -26,11 +28,19 @@ public class BackupWalletCode extends AppCompatActivity {
         setContentView(R.layout.activity_backup_wallet_code);
         mCodeRecycler = findViewById(R.id.codeRecycler);
         continueBtn = findViewById(R.id.continueBtn);
+        mShowQr = findViewById(R.id.showQr);
 
         walletCodesList();
         continueBtn.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
         });
+        mShowQr.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(),QrCodeActivity.class);
+            startActivity(intent);
+        });
+
+
+
     }
 
     // Grid layout
