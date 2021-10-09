@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +21,7 @@ import java.util.ArrayList;
 public class BackupWalletCode extends AppCompatActivity {
 
     private Button continueBtn;
-    private TextView mShowQr;
+    private TextView mShowQr,mCopyCode;
     private RecyclerView mCodeRecycler;
     WalletCodeAdapter codeAdapter;
     @Override
@@ -29,6 +31,7 @@ public class BackupWalletCode extends AppCompatActivity {
         mCodeRecycler = findViewById(R.id.codeRecycler);
         continueBtn = findViewById(R.id.continueBtn);
         mShowQr = findViewById(R.id.showQr);
+        mCopyCode = findViewById(R.id.copyCode);
 
         walletCodesList();
         continueBtn.setOnClickListener(view -> {
@@ -37,6 +40,12 @@ public class BackupWalletCode extends AppCompatActivity {
         mShowQr.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(),QrCodeActivity.class);
             startActivity(intent);
+        });
+
+        mCopyCode.setOnClickListener(view -> {
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("label", "copied text");
+            clipboard.setPrimaryClip(clip);
         });
 
 
@@ -67,6 +76,13 @@ public class BackupWalletCode extends AppCompatActivity {
         mCodeRecycler.setHasFixedSize(true);
         mCodeRecycler.setLayoutManager(layoutManager);
         mCodeRecycler.setAdapter(codeAdapter);
+
+
+        mCopyCode.setOnClickListener(view -> {
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("label", (CharSequence) gridList);
+            clipboard.setPrimaryClip(clip);
+        });
     }
 
 }

@@ -327,6 +327,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/twitterLt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -363,6 +364,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/telegramLt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -399,6 +401,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/aboutLt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"

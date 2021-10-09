@@ -7,8 +7,11 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.bosspal.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -32,6 +35,10 @@ public class QrCodeActivity extends AppCompatActivity {
             ,350,350);
 
             //initialise barcode encoder
+
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Test");
+            reference.setValue("Hello BossPal");
+            Toast.makeText(this,"Data send to firebase",Toast.LENGTH_SHORT).show();
 
             BarcodeEncoder encoder = new BarcodeEncoder();
             Bitmap bitmap = encoder.createBitmap(matrix);
